@@ -78,6 +78,9 @@ b,
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.load-wrapper-complete {
   animation: fadeout 3s cubic-bezier(0.075, 0.82, 0.165, 1) 3s forwards;
 }
 

@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/navbar";
 import Loader from "@/components/loader";
 import { Footer } from "@/components/footer";
+import RenderHandler from "@/components/render-handler";
 
 const gothamLight = localFont({
   src: "./fonts/gothamtest.woff2",
@@ -21,14 +22,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${gothamLight.className} antialiased tracking-tight`}
-      >
+      <body className={`${gothamLight.className} antialiased tracking-tight`}>
+        <RenderHandler/>
         <div>
           <Loader />
           <NavBar />
           {children}
-          <Footer/>
+          <Footer />
         </div>
       </body>
     </html>
