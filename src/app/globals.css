@@ -8,6 +8,7 @@
   src: url('./fonts/Gotham-XLight.otf') format('woff2');
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Gotham-Bold';
   src: url('./fonts/Gotham-Bold.otf') format('woff2');
@@ -29,7 +30,7 @@
   --muted: #696969;
   --green: #7cbf4f;
   --dgreen: #2d7000;
-  --highlight: #F0693E;  
+  --highlight: #F0693E;
   --black: #171717;
   --tlight: 'Gotham', sans-serif;
   --tbold: 'Gotham-Bold', sans-serif;
@@ -42,7 +43,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   scrollbar-width: thin;
   scrollbar-color: var(--muted) transparent;
-} 
+}
 
 body {
   color: var(--black);
@@ -50,9 +51,10 @@ body {
   font-family: var(--tlight);
 }
 
-b, .font-bold {
+b,
+.font-bold {
   font-family: var(--tbold);
-  
+
 }
 
 .font-light {
@@ -84,6 +86,7 @@ b, .font-bold {
     opacity: 1;
     visibility: visible;
   }
+
   to {
     opacity: 0;
     visibility: hidden;
@@ -100,9 +103,9 @@ b, .font-bold {
 }
 
 .section-box-shadow {
-  box-shadow: 0px 0px 66px 5px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0px 0px 66px 5px rgba(0,0,0,0.5);
-  -moz-box-shadow: 0px 0px 66px 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 66px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 66px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 66px 5px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -135,24 +138,11 @@ span {
 
 .stats-container {
   background-image: url("/form-bg.png");
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 10rem 0;
 }
 
-.why-us-content-container {
-  max-width: 415px;
-}
-
-.bottom-container-main {
-  margin-top: -50px;
-  background: #fff;
-  border-radius: 55px;
-}
-
-.why-us-main-container {
-  padding: 8rem 6rem;
-}
 
 .hero-main-container {
   padding: 50px 80px;
@@ -183,6 +173,7 @@ span {
   .top-container {
     background-size: cover;
   }
+
   .button-container img {
     display: none;
   }
@@ -215,6 +206,7 @@ span {
     align-items: center;
     justify-content: center;
   }
+
   .option-text {
     text-align: center;
   }
@@ -265,10 +257,6 @@ span {
   .fields input,
   .features-description {
     width: 100% !important;
-  }
-
-  .simple-form-main-container {
-    padding: 35px 0;
   }
 
   .cards-content-container .cards-heading {
@@ -324,4 +312,62 @@ span {
   :root {
     --radius: 0.5rem;
   }
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.text-term {
+  margin-left: calc(2em + 10px);
+  margin-bottom: 15px;
+  margin-top: 10px;
+  width: calc(100% - 70px);
+}
+
+.text-term p {
+  padding-bottom: 12px;
+  text-align: justify;
+  -moz-text-align-last: left;
+  text-align-last: left;
+  width: 100%;
+}
+
+.numeral-text {
+  margin-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 12px;
+  margin-top: 5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.numeral-text .text-term-span {
+  width: 25px;
+  height: 25px;
+  background-color: var(--white);
+  color: var(--gray);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 16px;
 }

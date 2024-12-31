@@ -1,0 +1,48 @@
+[
+    {
+      "src": "/cards/card1.png",
+      "description": "Le darás visibilidad a tu empresa en la Web.",
+      "title": "Visibilidad"
+    },
+    {
+      "src": "/cards/card2.png",
+      "description": "Ganarás clientes nuevos que utilizan nuestra plataforma.",
+      "title": "Clientes"
+    },
+    {
+      "src": "/cards/card3.png",
+      "description": "Conocerás las preferencias de los clientes.",
+      "title": "Preferencias"
+    },
+    {
+      "src": "/cards/card4.png",
+      "description": "Recibirás solicitudes online para tus compañias.",
+      "title": "Solicitudes"
+    },
+    {
+      "src": "/cards/card5.png",
+      "description": "Podrás presentarle al cliente potencial la lista actual de tus productos y precios.",
+      "title": "Productos"
+    },
+    {
+      "src": "/cards/card6.png",
+      "description": "Le informarás al cliente los descuentos y promociones de tu negocio.",
+      "title": "Promociones"
+    },
+    {
+      "src": "/cards/card7.png",
+      "description": "Tendrás la posibilidad de gestionar los pedidos y entregas de tu restaurante.",
+      "title": "Pedidos"
+    },
+    {
+      "src": "/cards/card8.png",
+      "description": "Reducirás el tiempo de espera y mejorarás la eficiencia en la operación.",
+      "title": "Eficiencia"
+    },
+    {
+      "src": "/cards/card9.png",
+      "description": "Llegarás a nuevos clientes en áreas fuera de tu alcance tradicional.",
+      "title": "Expansión"
+    }
+  ]
+  

@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 import Loader from "@/components/loader";
+import { Footer } from "@/components/footer";
 
 const gothamLight = localFont({
   src: "./fonts/gothamtest.woff2",
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
           <Loader />
           <NavBar />
           {children}
+          <Footer/>
         </div>
       </body>
     </html>

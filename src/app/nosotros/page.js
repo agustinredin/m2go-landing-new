@@ -1,9 +1,11 @@
+import { FormSimple } from "@/components/form-simple";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { WhyUs } from "@/components/why-us";
 import Link from "next/link";
 
 const faqs = [
@@ -103,7 +105,8 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="bg-white rounded-t-[3rem] -top-24 h-64 relative">
+      <WhyUs/>
+      <div className="bg-white rounded-t-[3rem] -top-24 h-64 mb-96 relative">
         <section className="py-12">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center flex-col">
             <h2 className="text-5xl font-bold text-gray-900 text-center mt-10">
@@ -127,6 +130,7 @@ export default function Page() {
           </div>
         </section>
       </div>
+      <FormSimple/>
     </section>
   );
 }
