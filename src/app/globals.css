@@ -78,10 +78,11 @@ b,
   justify-content: center;
   align-items: center;
   overflow: hidden;
-}
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+  animation: fadeout 2s cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
 
-.load-wrapper-complete {
-  animation: fadeout 3s cubic-bezier(0.075, 0.82, 0.165, 1) 3s forwards;
 }
 
 @keyframes fadeout {
