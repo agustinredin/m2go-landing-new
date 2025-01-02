@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       {/* hero */}
-      <Container id="hero" className="!my-0">
+      <Container id="hero" className="!my-0 pt-16">
         <div className="flex items-end mt-12">
           <div className="pb-32 flex-1">
             <p className="text-dgreen font-bold text-2xl">Manjar2go</p>

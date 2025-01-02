@@ -8,18 +8,18 @@ export default function Page() {
   return (
     <>
       <Container>
-        <div className="grid grid-cols-[1fr_auto]">
-          <div className="flex flex-col w-full px-16 py-4">
+        <div className="flex flex-row mt-32 justify-center items-center max-lg:flex-wrap">
+          <div className="flex flex-col max-lg:w-full px-16 py-4">
             <h4 className="text-3xl text-grey font-black my-6">
               ¿Te gustaría ser parte de nuestro equipo?
             </h4>
-            <span className="w-3/4">
+            <span className="lg:w-3/4">
               Buscamos personas para realizar recogidas y entregas de pedidos en
               los negocios participantes. Te brindamos calidad, eficiencia y
               satisfacción en tu trabajo. ¡Súmate a nuestro equipo y descubre lo
               que tenemos para ti y tu carrera!
             </span>
-            <div className="features-card-container -mt-4 flex items-center gap-12">
+            <div className="features-card-container -mt-4 flex items-center lg:gap-12 max-lg:my-8">
               <div className="wrapper flex flex-col items-start pt-4">
                 <div className="card-container flex items-center justify-start px-2 py-4 rounded-xl gap-4 my-2 w-72">
                   <div className="card-logo">
@@ -94,10 +94,10 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col px-12">
+          <div className="flex flex-col max-lg:hidden w-full justify-center">
             <img
               alt="Repartidor de M2Go"
-              className="h-[30vmax] w-full rounded-xl object-scale-down"
+              className="h-[30vmax] w-full mx-auto rounded-xl object-cover object-top"
               src="./repartidor-1.png"
             ></img>
           </div>
@@ -105,20 +105,20 @@ export default function Page() {
       </Container>
       <Container className="min-w-full" id="repartidor-form">
         <Waves />
-        <div className="stats-container !py-4 flex flex-col section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
+        <div className="stats-container max-lg:bg-cover max-lg:bg-fixed !py-4 flex flex-col section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
           <div className="px-16 py-8 flex flex-col items-center">
-            <h2 className="text-5xl mt-6 font-bold">
+            <h2 className="text-5xl mt-6 font-bold text-center">
               ¡Únete a M2Go y disfruta de los mejores beneficios como
               repartidor!
             </h2>
-            <div className="w-3/4 text-center mt-4 mb-12">
+            <div className="w-3/4 text-center max-lg:mt-8 mt-4 mb-12">
               <p className="text-xl">
                 Te brindamos calidad, eficiencia y satisfacción en tu trabajo.
                 ¡Súmate a nuestro equipo y descubre lo que tenemos para ti y tu
                 carrera!
               </p>
             </div>
-            <Container className="my-4">
+            <Container className="my-4 max-lg:!mx-0">
               <form className="space-y-4">
                 <div className="flex flex-wrap gap-4">
                   <Input
