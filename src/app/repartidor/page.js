@@ -9,7 +9,7 @@ export default function Page() {
     <>
       <Container>
         <div className="flex flex-row mt-32 justify-center items-center max-lg:flex-wrap">
-          <div className="flex flex-col max-lg:w-full px-16 py-4">
+          <div className="flex flex-col max-lg:w-full lg:px-16 py-4">
             <h4 className="text-3xl text-grey font-black my-6">
               ¿Te gustaría ser parte de nuestro equipo?
             </h4>
@@ -106,7 +106,7 @@ export default function Page() {
       <Container className="min-w-full" id="repartidor-form">
         <Waves />
         <div className="stats-container max-lg:bg-cover max-lg:bg-fixed !py-4 flex flex-col section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
-          <div className="px-16 py-8 flex flex-col items-center">
+          <div className="lg:px-16 py-8 flex flex-col items-center">
             <h2 className="text-5xl mt-6 font-bold text-center">
               ¡Únete a M2Go y disfruta de los mejores beneficios como
               repartidor!
@@ -172,14 +172,16 @@ export default function Page() {
                     required
                   />
                 </div>
-                <div className="flex flex-nowrap gap-4">
-                    <Select
+                <div className="flex flex-wrap gap-4">
+                <Select
                     id="tipovehiculo"
                     label="Tipo de vehículo">
                     <option value="auto">Auto</option>
                     <option value="moto">Motocicleta</option>
                     <option value="bici">Bicicleta</option>
                     </Select>
+                </div>
+                <div className="flex flex-nowrap gap-4">
                   <Input
                     type="file"
                     id="segurovehiculo"
