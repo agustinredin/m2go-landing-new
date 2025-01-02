@@ -57,6 +57,13 @@ b,
 
 }
 
+a {
+  cursor: pointer;
+}
+a:hover {
+  scale:1.02;
+}
+
 .font-light {
   font-family: var(--tlight);
 }
@@ -173,9 +180,7 @@ span {
 }
 
 .unique-card {
-  background-image: url("/cards/card-bg.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-image: url("/caracteristicas_bg.png");
 }
 
 @media screen and (max-width: 768px) {
@@ -195,34 +200,23 @@ span {
   .hero-main-container,
   .stats-container,
   .why-us-main-container,
-  .card-main-wrapper,
   .features-main-container,
   .form-container {
-    padding: 25px 25px !important;
+    padding: 4rem 25px !important;
   }
 
   .hero-content .heading span,
   .stats-count span,
-  .cards-heading span,
   .form-heading span,
   .why-us-content .heading span,
   .feature-heading span {
-    font-size: 18px;
+    font-size: 32px;
   }
 
-  .option-container {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .option-text {
-    text-align: center;
-  }
 
   .stats-container {
     flex-direction: column;
-    gap: 25px;
+    gap: 4rem;
   }
 
   .features-container {
@@ -298,10 +292,6 @@ span {
     align-items: center;
   }
 
-  .button-container {
-    display: none !important;
-  }
-
   #navbar {
     position: absolute;
     top: 100%;
@@ -316,6 +306,12 @@ span {
   } */
 }
 
+@media screen and (max-width: 468px) {
+  .stats-container {
+    background-image: none;
+    background-color: darkgreen;
+  }
+}
 
 @layer base {
   :root {

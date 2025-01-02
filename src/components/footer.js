@@ -14,10 +14,10 @@ export const Footer = () => {
                 <span className="text-lg font-bold">Producto</span>
                 </div>
                 <div className="links flex flex-col justify-center items-center gap-1">
-                <a className="text-md" href="#">
+                <a className="text-md" href="/tyc">
                     Términos y Condiciones
                 </a>
-                <a className="text-md" href="#">
+                <a className="text-md" href="/privacidad">
                     Politica de Privacidad
                 </a>
                 </div>
@@ -27,10 +27,10 @@ export const Footer = () => {
                 <span className="text-lg font-bold">Conecta</span>
                 </div>
                 <div className="links flex flex-col justify-center items-center gap-1">
-                <a className="text-md" href="#">
+                <a className="text-md" href="/faq">
                     Preguntas Frecuentes
                 </a>
-                <a className="text-md" href="#">
+                <a className="text-md" href="/contacto">
                     Contacto
                 </a>
                 </div>

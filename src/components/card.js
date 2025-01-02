@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 
 export const Card = ({className, data, ...props}) => {
     return (
-        <div className={cn("card flex basis-1/3 flex-col justify-center items-center bg-white rounded-xl shadow-2xl border border-[#e1e1e9] max-w-sm w-64 h-content", className)} {...props}>
+        <div className={cn("card flex flex-col justify-center items-center bg-white rounded-xl shadow-2xl border border-[#e1e1e9] w-72 h-content", className)} {...props}>
         <div className="card-image w-full">
           <img
             className="w-full object-cover rounded-t-lg h-48"

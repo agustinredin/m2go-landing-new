@@ -4,7 +4,7 @@ export const WhyUs = () => {
     return (
               <Container id="why-us">
                 <div className="my-32">
-                  <div className="grid grid-cols-2 place-content-center justify-items-center gap-[80px]">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center justify-items-center gap-[80px]">
                     <div className="why-us-hero">
                       <img src="/why-us.png" alt="why-us" />
                     </div>
@@ -17,7 +17,7 @@ export const WhyUs = () => {
                           </span>
                         </span>
                       </div>
-                      <div className="mt-4 mb-8 w-[80%]">
+                      <div className="mt-4 mb-8 lg:w-[80%]">
                         <span className="text-xl font-normal text-muted">
                           En M2GO hemos desarrollado esta plataforma para agilizar sus
                           solicitudes. Sabemos lo que deseas y comprendemos tus

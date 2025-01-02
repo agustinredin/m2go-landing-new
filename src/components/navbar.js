@@ -56,14 +56,17 @@ const NavBar = () => {
   return (
     <div className="">
     <div className="hidden lg:flex fixed -top-1 w-full z-[888]">
-      <Container id="navbar" className="top-0 my-0 mb-12 flex justify-between items-center px-12 border border-[#dedede] subpixel-antialiased shadow-2xl rounded-b-xl bg-[#e5e5e5] navbar-box-shadow">
+      <Container id="navbar" className="w-full max-w-screen-xl top-0 my-0 mb-12 flex justify-between items-center px-12 border border-[#dedede] subpixel-antialiased shadow-2xl rounded-b-xl bg-[#e5e5e5] navbar-box-shadow">
+        <Link href="/">
           <Image
             src="/logo.png"
             alt="M2Go Logo"
             loading="eager"
-            width={40}
-            height={40}
+            width={60}
+            height={60}
+            className="my-2"
           />
+        </Link>
           <div className="hidden lg:flex md:gap-8">
             {navItems.map((item, index) => (
               <Link key={index} href={item.href} className={item.className}>
@@ -72,10 +75,21 @@ const NavBar = () => {
             ))}
           </div>
           <div className="text-sm hidden lg:block rounded-lg bg-dgreen text-white cursor-pointer px-6 py-2 hover:scale-[1.05] hover:-translate-y-1 transition-all">
-            Acceder
+            <a href="https://app.manjar2go.com">
+              Acceder
+            </a>
           </div>
       </Container>
     </div>
+
+    <Image
+            src="/logo.png"
+            alt="M2Go Logo"
+            loading="eager"
+            width={60}
+            height={60}
+            className="block lg:hidden fixed top-12 left-8 z-[100]"
+          />
 
       <button
         onClick={toggleMenu}
@@ -91,26 +105,6 @@ const NavBar = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Top-centered logo button */}
-        <Link
-          href="/"
-          className="absolute top-4 left-1/2 transform -translate-x-1/2"
-        >
-          <span className="sr-only">Home</span>
-          <svg
-            className="h-12 w-12 my-4 text-muted"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-            />
-          </svg>
-        </Link>
 
         {/* Top-right close button */}
 

@@ -7,10 +7,10 @@ import { Waves } from "@/components/waves";
 const Caracteristicas = () => (
   <>
     <Container>
-      <div className="px-20 mx-auto my-32 flex flex-col lg:flex-row items-center">
-        <div className="lg:w-1/2 lg:pr-8 mb-8 lg:mb-0">
+      <div className="mx-auto my-32 flex flex-col lg:flex-row items-center">
+        <div className="lg:pr-8 mb-8 lg:mb-0">
           <div className="relative"></div>
-          <h2 className="text-8xl font-black text-grey mb-4 leading-[0.92] tracking-tight z-50">
+          <h2 className="max-lg:text-5xl text-7xl font-black text-grey mb-4 leading-[0.92] tracking-tight z-50">
             Resuelve tus comidas sencillamente
           </h2>
           <div className="flex h-full">
@@ -22,9 +22,9 @@ const Caracteristicas = () => (
           </div>
           <ScrollDownArrow targetId="features" className="mt-8 ml-8 bg-green" />
         </div>
-        <div className="flex justify-center items-end relative min-h-[32rem] w-full">
+        <div className="flex justify-center items-end relative lg:min-h-[32rem] w-full">
           <img
-            className="h-[32rem] -z-10"
+            className="max-lg:h-[18rem] h-[32rem] -z-10 w-full object-contain max-lg:object-top"
             alt="M2Go Ejemplo de menú en APP"
             src="/caracteristicas_1.png"
           />

@@ -2,7 +2,7 @@ import { Container } from "./container";
 
 export const Waves = () => {
   return (
-    <Container className="min-w-full !my-0" id="waves">
+    <Container className="min-w-full !my-0 -top-32" id="waves">
       <div className="relative h-[8rem]">
         <object
           data="/wave_1.svg"

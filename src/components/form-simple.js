@@ -1,4 +1,5 @@
 import { Container } from "./container";
+import Input from "./input";
 
 export const FormSimple = () => {
   return (
@@ -19,49 +20,35 @@ export const FormSimple = () => {
         </div>
         <div className="simple-form-container">
           <Container>
-            <div className="form-container flex items-center">
-              <div className="form-hero flex">
+            <div className="form-container max-lg:!p-0 flex items-center">
+              <div className="form-hero flex flex-1">
                 <img
                   src="./form-hero.png"
-                  className="max-w-xl"
+                  className="lg:max-w-xl"
                   alt="form-hero"
                 />
               </div>
               <div className="simple-form flex-1">
-                <form action="submit">
-                  <div className="fields-container flex flex-col justify-between gap-6">
-                    <div className="fields flex gap-2 items-center">
-                      <input
-                        className="bg-dgreen w-full text-white text-md font-normal shadow-lg border-white rounded-lg outline-none px-2 py-2 placeholder-white placeholder:text-md decoration-white"
-                        placeholder="E-Mail"
-                        type="email"
-                        name="email"
-                        id="email"
-                      />
-                      <input
-                        className="bg-dgreen text-white text-md font-normal shadow-lg border-white rounded-lg outline-none px-2 py-2 placeholder-white placeholder:text-md decoration-white"
-                        placeholder="Telefono"
-                        type="number"
-                      />
-                    </div>
-                    <div className="fields">
-                      <input
-                        className="bg-dgreen text-white w-full text-md font-normal shadow-lg border-white rounded-lg outline-none px-2 py-2 placeholder-white placeholder:text-md decoration-white"
-                        placeholder="Nombres y apellidos"
-                        type="text"
-                        name="text"
-                        id="text"
-                      />
-                    </div>
-                    <div className="fields">
-                      <textarea
-                        rows="5"
-                        className="bg-dgreen text-white text-md w-full resize-none font-normal shadow-lg border-white rounded-lg outline-none px-2 py-2 placeholder-white placeholder:text-md decoration-white"
-                        placeholder="Envía un mensaje"
-                        name="comment"
-                        id="comment"
-                      ></textarea>
-                    </div>
+                <form className="space-y-6">
+                  <div className="flex flex-nowrap gap-4">
+                    <Input
+                      type="email"
+                      id="email"
+                      label="E-Mail"
+                      placeholder="Ingrese su E-Mail"
+                    />
+                    <Input
+                      type="number"
+                      id="telefono"
+                      label="Teléfono"
+                      placeholder="Ingrese su teléfono"
+                    />
+                  </div>
+                  <div className="flex flex-wrap gap-4">
+                    <Input type="text" id="nombreapellido" placeholder="Ingrese nombre y apellido" label="Nombre y apellido" />
+                  </div>
+                  <div className="flex flex-wrap gap-4">
+                    <Input type="textarea" id="mensaje" placeholder="Envíe un mensaje" label="Mensaje" />
                   </div>
                   <div className="button-container my-6">
                     <button

@@ -37,25 +37,25 @@ const faqs = [
 export default function Demo() {
   return (
     <section>
-      <div className="px-32 text-grey my-8 mx-auto py-16 custom-shadow overflow-hidden">
+      <div className="lg:px-32 text-grey my-8 mx-auto py-16 custom-shadow overflow-hidden">
         <div className="flex flex-col items-center">
-          <div className="text-center">
-            <h2 className="text-7xl font-black tracking-tight">
+          <div className="max-lg:py-12 text-center">
+            <h2 className="text-4xl lg:text-7xl font-black tracking-tight">
               Ordena con facilidad en <span className="text-green">M2Go</span>
             </h2>
-            <p className="my-4 text-2xl">
+            <p className="max-lg:py-4 my-4 text-2xl">
               Tu comida favorita al alcance de tus manos.
             </p>
           </div>
-          <div className="relative w-full max-w-[1200px] mx-auto p-6 bg-grey rounded-lg border-4 border-muted shadow-lg">
+          <div className="max-lg:invisible relative w-full max-w-[1200px] mx-auto p-6 bg-grey rounded-lg border-4 border-muted shadow-lg">
             {/* Top bar of the MacBook */}
             <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1.5 bg-gray-700 rounded-full"></div>
 
             {/* Screen area */}
-            <div className="relative w-full h-0 pb-[56.25%] bg-black rounded-lg overflow-hidden">
+            <div className="lg:relative lg:w-full pb-[56.25%] bg-black rounded-lg overflow-hidden">
               <iframe
                 src="https://player.vimeo.com/video/418242555?h=bc6da5fd3c"
-                className="absolute top-0 left-0 w-full h-full"
+                className="max-lg:!visible max-lg:!w-[100vw] absolute top-0 left-0 w-full h-full"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 title="Vimeo Video"
@@ -67,7 +67,7 @@ export default function Demo() {
           </div>
         </div>
       </div>
-      <div className="bg-white rounded-t-[3rem] -top-24 h-64 relative">
+      <div className="bg-white rounded-t-[3rem] -top-24 h-content relative">
         <section className="py-12">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center flex-col">
             <h2 className="text-5xl font-bold text-gray-900 text-center mt-10">

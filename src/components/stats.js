@@ -3,7 +3,7 @@ import { Container } from "./container";
 export const Stats = () => {
   return (
     <Container className="min-w-full !my-0" id="stats">
-      <div className="stats-container flex justify-evenly items-center section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
+      <div className="stats-container max-lg:bg-cover max-lg:bg-fixed flex justify-evenly items-center section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
         <div className="stats flex flex-col items-center gap-4">
           <div className="stats-count">
             <span className="text-5xl font-bold">150+</span>
