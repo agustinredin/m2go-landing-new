@@ -7,13 +7,13 @@ export const FormSimple = () => {
     <Container className="min-w-full" id="form-simple" triggerAnim={false}>
       <div className="simple-form-main-container py-12 flex flex-col items-center gap-12">
         <div className="form-content-container flex flex-col gap-2 items-center">
-          <div className="form-heading px-4 py-2 border-b-dgreen border-b-2">
-            <span className="text-3xl font-semibold text-grey">
+          <div className="form-heading p-4 lg:border-b-dgreen lg:border-b-2 text-center">
+            <span className="text-5xl font-bold text-grey max-lg:text-center">
               Déjanos una consulta
             </span>
           </div>
-          <div className="form-description">
-            <span className="text-lg font-normal text-muted">
+          <div className="form-description max-lg:py-8">
+            <span className="text-md font-normal text-muted">
               Por favor llena el siguiente formulario y te contactaremos lo
               antes posible.
             </span>
@@ -22,14 +22,14 @@ export const FormSimple = () => {
         <div className="simple-form-container">
           <Container triggerAnim={false}>
             <div className="form-container max-lg:!p-0 flex items-center">
-              <ScrollAnimatedDiv duration={1.75} className="form-hero flex flex-1">
+              <ScrollAnimatedDiv duration={1} className="form-hero flex flex-1">
                 <img
                   src="./form-hero.png"
                   className="lg:max-w-xl"
                   alt="form-hero"
                 />
               </ScrollAnimatedDiv>
-              <ScrollAnimatedDiv duration={1.25} className="simple-form flex-1">
+              <ScrollAnimatedDiv duration={1} className="simple-form flex-1">
                 <form className="space-y-6">
                   <div className="flex flex-nowrap gap-4">
                     <Input

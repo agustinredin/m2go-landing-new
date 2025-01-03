@@ -1,4 +1,5 @@
 import { FormSimple } from "@/components/form-simple";
+import ScrollAnimatedDiv from "@/components/scroll-animated-div";
 import {
   Accordion,
   AccordionContent,
@@ -45,14 +46,14 @@ export default function Page() {
           <div className="flex h-full">
             <div className="max-lg:hidden bg-green w-4 mr-4 my-16"></div>
             <div className="flex flex-col items-start justify-center">
-              <div className="flex items-start">
+              <ScrollAnimatedDiv duration={1} className="flex items-start">
                 <h3 className="inline-flex text-[5vmax] ml-auto mr-2 text-nowrap whitespace-nowrap leading-[0.9] tracking-tight font-black">
                   Donde la <br /> no llega
                 </h3>
                 <h2 className="inline-flex text-green text-[12vmax] w-auto leading-[0.75em] font-black">
                   U
                 </h2>
-              </div>
+              </ScrollAnimatedDiv>
               <p className="max-w-full mt-6 text-xl text-muted">
                 Somos M2Go, una empresa que conecta restaurantes y lugares de
                 comida cerca de ti, ofreciendo alternativas para ordenar online
@@ -93,18 +94,18 @@ export default function Page() {
       <Waves/>
       <div className="bg-[#3d9a20] section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
         <div className="px-16 py-8 flex flex-col items-center justify-center">
-          <h2 className="text-5xl mt-6 font-bold text-center">En M2Go, tenemos un compromiso contigo</h2>
-          <p className="text-xl mt-6 lg:mt-2 mb-24 lg:mb-12 text-center">
+          <ScrollAnimatedDiv as="h2" duration={1} className="text-5xl mt-6 font-bold text-center">En M2Go, tenemos un compromiso contigo</ScrollAnimatedDiv>
+          <ScrollAnimatedDiv as="p" duration={1.25} className="text-xl mt-6 lg:mt-2 mb-24 lg:mb-12 text-center">
             Este es brindarte un servicio de calidad, porque en M2Go hacemos lo
             mejor por ti.
-          </p>
-          <div className="flex items-center justify-center w-full pb-20">
+          </ScrollAnimatedDiv>
+          <ScrollAnimatedDiv duration={1.5} className="flex items-center justify-center w-full pb-20">
             <div className="hidden lg:block flex-1 border-t-2 border-white ml-8"></div>
             <div className="lg:mx-32">
               <img src="logo.png" alt="Logo" className="flex-1 h-12 invert" />
             </div>
             <div className="hidden lg:block flex-1 border-t-2 border-white mr-8"></div>
-          </div>
+          </ScrollAnimatedDiv>
         </div>
       </div>
       <WhyUs/>
@@ -116,14 +117,16 @@ export default function Page() {
             </h2>
             <Accordion type="single" collapsible className="w-full my-8">
               {faqs.map((faq, index) => (
-                <AccordionItem key={`item-${index}`} value={`item-${index}`} className="my-4">
-                  <AccordionTrigger className="text-left">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="text-muted text-lg mx-6" dangerouslySetInnerHTML={{__html: faq.answer}}></div>
-                  </AccordionContent>
-                </AccordionItem>
+                <ScrollAnimatedDiv duration={(index + 1) * 0.4} key={`item-${index}`}>
+                  <AccordionItem value={`item-${index}`} className="my-4">
+                    <AccordionTrigger className="text-left">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="text-muted text-lg mx-6" dangerouslySetInnerHTML={{__html: faq.answer}}></div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </ScrollAnimatedDiv>
               ))}
             </Accordion>
             <h4 className="my-8 text-muted">

@@ -1,3 +1,4 @@
+import ScrollAnimatedDiv from "@/components/scroll-animated-div";
 import {
   Accordion,
   AccordionContent,
@@ -67,7 +68,7 @@ export default function Demo() {
           </div>
         </div>
       </div>
-      <div className="bg-white rounded-t-[3rem] -top-24 h-content relative">
+      <div className="bg-white rounded-t-[3rem] h-content  relative">
         <section className="py-12">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center flex-col">
             <h2 className="text-5xl font-bold text-gray-900 text-center mt-10">
@@ -75,32 +76,20 @@ export default function Demo() {
             </h2>
             <Accordion type="single" collapsible className="w-full my-8">
               {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={`item-${index}`}
-                  value={`item-${index}`}
-                  className="my-4"
-                >
-                  <AccordionTrigger className="text-left">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div
-                      className="text-muted text-lg mx-6"
-                      dangerouslySetInnerHTML={{ __html: faq.answer }}
-                    ></div>
-                  </AccordionContent>
-                </AccordionItem>
+                <ScrollAnimatedDiv duration={(index + 1) * 0.25} key={`item-${index}`}>
+                  <AccordionItem value={`item-${index}`} className="my-4">
+                    <AccordionTrigger className="text-left">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="text-muted text-lg mx-6" dangerouslySetInnerHTML={{__html: faq.answer}}></div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </ScrollAnimatedDiv>
               ))}
             </Accordion>
             <h4 className="my-8 text-muted">
-              ¿Tienes alguna pregunta que no se encuentra aquí?{" "}
-              <Link
-                href="/contacto"
-                className="text-blue-500 hover:text-blue-700"
-              >
-                Escríbenos
-              </Link>
-              .
+              ¿Tienes alguna pregunta que no se encuentra aquí? <Link href='/contacto' className="text-blue-500 hover:text-blue-700">Escríbenos</Link>.
             </h4>
           </div>
         </section>

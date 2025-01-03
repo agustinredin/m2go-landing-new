@@ -63,7 +63,7 @@ export const Features = () => {
             <div className="features-card-main-container max-lg:w-full">
               <div className="features-card-container -mt-4 flex justify-between items-center gap-12">
                 <div className="wrapper flex flex-col justify-between items-start gap-12">
-                  <ScrollAnimatedDiv as="div" duration={2} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
+                  <ScrollAnimatedDiv as="div" duration={1.25} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
                     <div className="card-logo">
                       <img
                         src="./explora.svg"
@@ -84,7 +84,7 @@ export const Features = () => {
                       </div>
                     </div>
                   </ScrollAnimatedDiv>
-                  <ScrollAnimatedDiv as="div" duration={3} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
+                  <ScrollAnimatedDiv as="div" duration={1.5} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
                     <div className="card-logo">
                       <img
                         src="./entrega-y -recogida.svg"
@@ -108,7 +108,7 @@ export const Features = () => {
                   </ScrollAnimatedDiv>
                 </div>
                 <div className="wrapper flex flex-col justify-between items-start gap-12">
-                  <ScrollAnimatedDiv duration={2.5} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
+                  <ScrollAnimatedDiv duration={1.75} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
                     <div className="card-logo">
                       <img
                         src="./seguimiento.svg"
@@ -129,7 +129,7 @@ export const Features = () => {
                       </div>
                     </div>
                   </ScrollAnimatedDiv>
-                  <ScrollAnimatedDiv duration={3.5} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
+                  <ScrollAnimatedDiv duration={2} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
                     <div className="card-logo">
                       <img
                         src="./pago-online.svg"

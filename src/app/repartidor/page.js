@@ -1,5 +1,6 @@
 import { Container } from "@/components/container";
 import Input from "@/components/input";
+import ScrollAnimatedDiv from "@/components/scroll-animated-div";
 import Select from "@/components/select";
 import { Waves } from "@/components/waves";
 import { Car, Clock12, HandCoins, ShieldHalf } from "lucide-react";
@@ -9,7 +10,7 @@ export default function Page() {
     <>
       <Container triggerAnim={false}>
         <div className="flex flex-row mt-32 justify-center items-center max-lg:flex-wrap">
-          <div className="flex flex-col max-lg:w-full lg:px-16 py-4">
+          <ScrollAnimatedDiv duration={0.75} delay={2} className="flex flex-col max-lg:w-full lg:px-16 py-4">
             <h4 className="text-3xl text-grey font-black my-6">
               ¿Te gustaría ser parte de nuestro equipo?
             </h4>
@@ -19,7 +20,7 @@ export default function Page() {
               satisfacción en tu trabajo. ¡Súmate a nuestro equipo y descubre lo
               que tenemos para ti y tu carrera!
             </span>
-            <div className="features-card-container -mt-4 flex items-center lg:gap-12 max-lg:my-8">
+            <ScrollAnimatedDiv duration={1} delay={2.5} className="features-card-container -mt-4 flex items-center lg:gap-12 max-lg:my-8">
               <div className="wrapper flex flex-col items-start pt-4">
                 <div className="card-container flex items-center justify-start px-2 py-4 rounded-xl gap-4 my-2 w-72">
                   <div className="card-logo">
@@ -92,8 +93,8 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </ScrollAnimatedDiv>
+          </ScrollAnimatedDiv>
           <div className="flex flex-col max-lg:hidden w-full justify-center">
             <img
               alt="Repartidor de M2Go"
@@ -107,7 +108,7 @@ export default function Page() {
         <Waves />
         <div className="stats-container max-lg:bg-cover max-lg:bg-fixed !py-4 flex flex-col section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
           <div className="lg:px-16 py-8 flex flex-col items-center">
-            <h2 className="text-5xl mt-6 f|ont-bold text-center">
+            <h2 className="text-5xl mt-6 font-bold text-center">
               ¡Únete a M2Go y disfruta de los mejores beneficios como
               repartidor!
             </h2>

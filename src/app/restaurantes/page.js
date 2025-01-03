@@ -46,7 +46,11 @@ export default function Page() {
             </div>
             <div className="flex flex-col w-full gap-[5em] mt-[12vh] lg:mt-0">
               {steps.map((step) => (
-                <ScrollAnimatedDiv key={step.number} duration={0.45 * step.number}>
+                <ScrollAnimatedDiv
+                  key={step.number}
+                  duration={1.04 * step.number}
+                  delay={2}
+                >
                   <div className="flex items-center">
                     <div className="w-32 lg:text-right">
                       <h1 className="text-9xl text-dgreen leading-[0.7] font-bold">
@@ -77,15 +81,25 @@ export default function Page() {
             </div>
             <div className="cards-container">
               <div className="cards-wrapper flex flex-wrap max-lg:justify-evenly justify-center items-center gap-16">
-                {CardsData.map((item, index) => {
-                  return <Card key={index} data={item} />;
-                })}
+                {CardsData.map((item, index) => (
+                  <ScrollAnimatedDiv
+                    as="div"
+                    key={index}
+                    duration={(index + 1) * 0.08}
+                  >
+                    <Card key={index} data={item} />
+                  </ScrollAnimatedDiv>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </Container>
-      <Container className="min-w-full" id="restaurantes-form" triggerAnim={false}>
+      <Container
+        className="min-w-full"
+        id="restaurantes-form"
+        triggerAnim={false}
+      >
         <Waves />
         <div className="stats-container max-lg:bg-cover max-lg:bg-fixed  !py-4 flex flex-col section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
           <div className="lg:px-16 py-8 flex flex-col items-center">
@@ -114,35 +128,22 @@ export default function Page() {
                   />
                 </div>
                 <div className="flex flex-wrap gap-4">
-                  <Input
-                    type="text"
-                    id="ubicacion"
-                    placeholder="Ubicación"
-                  />
+                  <Input type="text" id="ubicacion" placeholder="Ubicación" />
                 </div>
                 <div className="flex w-full flex-nowrap gap-4">
-                    <Input
-                      type="number"
-                      id="telefono"
-                      placeholder="Teléfono"
-                    />
-                    <Input
-                    type="email"
-                    id="email"
-                    placeholder="E-Mail"
-                    />
-                  </div>
-
+                  <Input type="number" id="telefono" placeholder="Teléfono" />
+                  <Input type="email" id="email" placeholder="E-Mail" />
+                </div>
 
                 {/* Submit */}
                 <div className="button-container my-6">
-                    <button
-                      className="bg-highlight text-white text-lg font-bold rounded-lg outline-none w-full py-2"
-                      type="submit"
-                    >
-                      Enviar
-                    </button>
-                  </div>
+                  <button
+                    className="bg-highlight text-white text-lg font-bold rounded-lg outline-none w-full py-2"
+                    type="submit"
+                  >
+                    Enviar
+                  </button>
+                </div>
               </form>
             </Container>
           </div>

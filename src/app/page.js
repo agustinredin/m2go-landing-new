@@ -33,13 +33,13 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] place-content-center place-items-center mt-12">
           <div className="max-lg:w-full max-lg:mt-16 max-lg:flex max-lg:flex-col max-lg:gap-2 pb-16 lg:pb-32 flex-1">
             <p className="text-dgreen font-bold text-2xl">Manjar2go</p>
-            <ScrollAnimatedDiv as="h2" duration={1.25} className="text-5xl lg:text-7xl text-dgreen font-black">
+            <ScrollAnimatedDiv as="h2" duration={0.75} delay={2} className="text-5xl lg:text-7xl text-dgreen font-black">
               Tu comida favorita
             </ScrollAnimatedDiv>
-            <ScrollAnimatedDiv as="h4" duration={1.75} className="text-4xl lg:text-6xl mb-2 text-grey font-black">
+            <ScrollAnimatedDiv as="h4" duration={1.25} delay={2} className="text-4xl lg:text-6xl mb-2 text-grey font-black">
               al alcance de tus manos
             </ScrollAnimatedDiv>
-            <ScrollAnimatedDiv duration={2.5} className="my-2 lg:w-[60%]">
+            <ScrollAnimatedDiv duration={1.5} delay={2} className="my-2 lg:w-[60%]">
               <p className="text-muted text-lg">
                 Manjar2Go es tu alternativa para ordenar la comida que te
                 encanta desde la comodidad de tu hogar, trabajo o donde quiera
