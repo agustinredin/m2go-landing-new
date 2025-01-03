@@ -56,7 +56,7 @@ const NavBar = () => {
   return (
     <div className="">
     <div className="hidden lg:flex fixed -top-1 w-full z-[888]">
-      <Container id="navbar" className="w-full max-w-screen-xl top-0 my-0 mb-12 flex justify-between items-center px-12 border border-[#dedede] subpixel-antialiased shadow-2xl rounded-b-xl bg-[#e5e5e5] navbar-box-shadow">
+      <Container triggerAnim={false} id="navbar" className="w-full max-w-screen-2xl top-0 my-0 mb-12 flex justify-between items-center px-12 border border-[#dedede] subpixel-antialiased shadow-2xl rounded-b-xl bg-white navbar-box-shadow">
         <Link href="/">
           <Image
             src="/logo.png"

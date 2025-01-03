@@ -1,4 +1,6 @@
+import { Scroll } from "lucide-react"
 import { Container } from "./container"
+import ScrollAnimatedDiv from "./scroll-animated-div"
 
 export const WhyUs = () => {
     return (
@@ -10,12 +12,12 @@ export const WhyUs = () => {
                     </div>
                     <div className="">
                       <div className="heading">
-                        <span className="text-5xl font-bold text-dgreen flex flex-col leading-normal mb-8">
+                        <ScrollAnimatedDiv as="span" className="text-5xl font-bold text-dgreen flex flex-col leading-normal mb-8">
                           Atendiendo
-                          <span className="text-5xl font-bold text-grey -mt-1">
+                          <ScrollAnimatedDiv className="text-5xl font-bold text-grey -mt-1" duration={1.8}>
                             tus necesidades
-                          </span>
-                        </span>
+                          </ScrollAnimatedDiv>
+                        </ScrollAnimatedDiv>
                       </div>
                       <div className="mt-4 mb-8 lg:w-[80%]">
                         <span className="text-xl font-normal text-muted">

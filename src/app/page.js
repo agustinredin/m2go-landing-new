@@ -6,6 +6,7 @@ import { FormSimple } from "@/components/form-simple";
 import { Features } from "@/components/features";
 import { Stats } from "@/components/stats";
 import { Waves } from "@/components/waves";
+import ScrollAnimatedDiv from "@/components/scroll-animated-div";
 
 export default function Home() {
   const appOptions = [
@@ -28,17 +29,17 @@ export default function Home() {
   return (
     <div>
       {/* hero */}
-      <Container id="hero" className="!my-0 pt-16">
+      <Container id="hero" className="!my-0 pt-16" triggerAnim={false}>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] place-content-center place-items-center mt-12">
           <div className="max-lg:w-full max-lg:mt-16 max-lg:flex max-lg:flex-col max-lg:gap-2 pb-16 lg:pb-32 flex-1">
             <p className="text-dgreen font-bold text-2xl">Manjar2go</p>
-            <h2 className="text-5xl lg:text-7xl text-dgreen font-black">
+            <ScrollAnimatedDiv as="h2" duration={1.25} className="text-5xl lg:text-7xl text-dgreen font-black">
               Tu comida favorita
-            </h2>
-            <h2 className="text-4xl lg:text-6xl mb-2 text-grey font-black">
+            </ScrollAnimatedDiv>
+            <ScrollAnimatedDiv as="h4" duration={1.75} className="text-4xl lg:text-6xl mb-2 text-grey font-black">
               al alcance de tus manos
-            </h2>
-            <div className="my-2 lg:w-[60%]">
+            </ScrollAnimatedDiv>
+            <ScrollAnimatedDiv duration={2.5} className="my-2 lg:w-[60%]">
               <p className="text-muted text-lg">
                 Manjar2Go es tu alternativa para ordenar la comida que te
                 encanta desde la comodidad de tu hogar, trabajo o donde quiera
@@ -64,7 +65,7 @@ export default function Home() {
                 </a>
                 </div>
               </div>
-            </div>
+            </ScrollAnimatedDiv>
           </div>
           <div className="max-lg:w-full hero-image-container h-full flex flex-col flex-1 justify-between">
             <div className="hero-image flex justify-center">
@@ -173,8 +174,7 @@ export default function Home() {
       {/* whyus */}
       <WhyUs />
       {/* beneficios */}
-      <Container id="beneficios">
-        <div>
+      <Container id="beneficios" triggerAnim={false}>
           <div className="card-main-wrapper py-16">
             <div className="cards-content-container pb-12">
               <div className="cards-content-container flex flex-col gap-2 items-center">
@@ -188,8 +188,12 @@ export default function Home() {
             </div>
             <div className="cards-container">
               <div className="cards-wrapper flex-wrap flex justify-center items-center gap-[5vw]">
-                {CardsData.splice(0, 3).map((item, index) => {
-                  return <Card key={index} data={item} />;
+                {CardsData.slice(0, 3).map((item, index) => {
+                  return (
+                  <ScrollAnimatedDiv as="div" key={index} duration={0.4 + (0.4 * index)}>
+                    <Card key={index} data={item} />
+                  </ScrollAnimatedDiv>
+                  ) 
                 })}
                 <div className=" min-h-32 card unique-card h-[326px] flex flex-col justify-center items-center rounded-lg w-72 bg-cover">
                   <a href="/restaurantes" target="_blank">
@@ -204,7 +208,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
       </Container>
 
       {/* features */}

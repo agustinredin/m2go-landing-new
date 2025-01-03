@@ -1,6 +1,7 @@
 import { Card } from "@/components/card";
 import { Container } from "@/components/container";
 import Input from "@/components/input";
+import ScrollAnimatedDiv from "@/components/scroll-animated-div";
 import { Waves } from "@/components/waves";
 import CardsData from "@/data/cards.json";
 
@@ -34,7 +35,7 @@ const steps = [
 export default function Page() {
   return (
     <>
-      <Container id="restaurantes-main">
+      <Container id="restaurantes-main" triggerAnim={false}>
         <div className="min-h-[50vh] text-grey">
           <div className="grid grid-cols-1 lg:grid-cols-2 w-[90vw] md:w-[75vw] mx-auto py-20">
             <div className="flex flex-col h-full">
@@ -45,7 +46,7 @@ export default function Page() {
             </div>
             <div className="flex flex-col w-full gap-[5em] mt-[12vh] lg:mt-0">
               {steps.map((step) => (
-                <div key={step.number}>
+                <ScrollAnimatedDiv key={step.number} duration={0.45 * step.number}>
                   <div className="flex items-center">
                     <div className="w-32 lg:text-right">
                       <h1 className="text-9xl text-dgreen leading-[0.7] font-bold">
@@ -57,7 +58,7 @@ export default function Page() {
                       <p className="text-xl text-left">{step.description}</p>
                     </div>
                   </div>
-                </div>
+                </ScrollAnimatedDiv>
               ))}
             </div>
           </div>
@@ -84,7 +85,7 @@ export default function Page() {
           </div>
         </div>
       </Container>
-      <Container className="min-w-full" id="restaurantes-form">
+      <Container className="min-w-full" id="restaurantes-form" triggerAnim={false}>
         <Waves />
         <div className="stats-container max-lg:bg-cover max-lg:bg-fixed  !py-4 flex flex-col section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
           <div className="lg:px-16 py-8 flex flex-col items-center">

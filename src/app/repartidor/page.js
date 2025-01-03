@@ -7,7 +7,7 @@ import { Car, Clock12, HandCoins, ShieldHalf } from "lucide-react";
 export default function Page() {
   return (
     <>
-      <Container>
+      <Container triggerAnim={false}>
         <div className="flex flex-row mt-32 justify-center items-center max-lg:flex-wrap">
           <div className="flex flex-col max-lg:w-full lg:px-16 py-4">
             <h4 className="text-3xl text-grey font-black my-6">
@@ -103,11 +103,11 @@ export default function Page() {
           </div>
         </div>
       </Container>
-      <Container className="min-w-full" id="repartidor-form">
+      <Container className="min-w-full" id="repartidor-form" triggerAnim={false}>
         <Waves />
         <div className="stats-container max-lg:bg-cover max-lg:bg-fixed !py-4 flex flex-col section-box-shadow rounded-t-[3rem] -top-10 relative text-white">
           <div className="lg:px-16 py-8 flex flex-col items-center">
-            <h2 className="text-5xl mt-6 font-bold text-center">
+            <h2 className="text-5xl mt-6 f|ont-bold text-center">
               ¡Únete a M2Go y disfruta de los mejores beneficios como
               repartidor!
             </h2>
@@ -118,7 +118,7 @@ export default function Page() {
                 carrera!
               </p>
             </div>
-            <Container className="my-4 max-lg:!mx-0">
+            <Container className="my-4 max-lg:!mx-0" triggerAnim={false}>
               <form className="space-y-4">
                 <div className="flex flex-wrap gap-4">
                   <Input

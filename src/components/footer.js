@@ -2,7 +2,7 @@ import { Container } from "./container";
 
 export const Footer = () => {
   return (
-    <Container className="min-w-full text-center my-0" id="footer">
+    <Container className="min-w-full text-center my-0" id="footer" triggerAnim={false}>
         <div className="footer-main-container px-8 text-white">
         <div className="footer-wrapper bg-highlight px-6 pt-8 rounded-tl-xl rounded-tr-xl">
             <div className="footer-container flex justify-evenly items-center">

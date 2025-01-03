@@ -40,10 +40,10 @@ const faqs = [
 export default function Page() {
   return (
     <section>
-      <div className="lg:px-16 text-grey my-8 lg:my-32 mx-auto py-16 custom-shadow overflow-hidden">
+      <div className="px-8 lg:px-16 text-grey my-16 lg:my-32 mx-auto py-16 custom-shadow overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] place-content-center place-items-center">
           <div className="flex h-full">
-            <div className="bg-green w-4 mr-4 my-16"></div>
+            <div className="max-lg:hidden bg-green w-4 mr-4 my-16"></div>
             <div className="flex flex-col items-start justify-center">
               <div className="flex items-start">
                 <h3 className="inline-flex text-[5vmax] ml-auto mr-2 text-nowrap whitespace-nowrap leading-[0.9] tracking-tight font-black">

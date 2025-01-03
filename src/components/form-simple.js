@@ -1,9 +1,10 @@
 import { Container } from "./container";
 import Input from "./input";
+import ScrollAnimatedDiv from "./scroll-animated-div";
 
 export const FormSimple = () => {
   return (
-    <Container className="min-w-full" id="form-simple">
+    <Container className="min-w-full" id="form-simple" triggerAnim={false}>
       <div className="simple-form-main-container py-12 flex flex-col items-center gap-12">
         <div className="form-content-container flex flex-col gap-2 items-center">
           <div className="form-heading px-4 py-2 border-b-dgreen border-b-2">
@@ -19,16 +20,16 @@ export const FormSimple = () => {
           </div>
         </div>
         <div className="simple-form-container">
-          <Container>
+          <Container triggerAnim={false}>
             <div className="form-container max-lg:!p-0 flex items-center">
-              <div className="form-hero flex flex-1">
+              <ScrollAnimatedDiv duration={1.75} className="form-hero flex flex-1">
                 <img
                   src="./form-hero.png"
                   className="lg:max-w-xl"
                   alt="form-hero"
                 />
-              </div>
-              <div className="simple-form flex-1">
+              </ScrollAnimatedDiv>
+              <ScrollAnimatedDiv duration={1.25} className="simple-form flex-1">
                 <form className="space-y-6">
                   <div className="flex flex-nowrap gap-4">
                     <Input
@@ -59,7 +60,7 @@ export const FormSimple = () => {
                     </button>
                   </div>
                 </form>
-              </div>
+              </ScrollAnimatedDiv>
             </div>
           </Container>
         </div>

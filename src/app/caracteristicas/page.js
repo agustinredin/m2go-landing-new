@@ -6,7 +6,7 @@ import { Waves } from "@/components/waves";
 
 const Caracteristicas = () => (
   <>
-    <Container>
+    <Container triggerAnim={false}>
       <div className="mx-auto my-32 flex flex-col lg:flex-row items-center">
         <div className="lg:pr-8 mb-8 lg:mb-0">
           <div className="relative"></div>

@@ -1,10 +1,11 @@
 import { Container } from "./container";
+import ScrollAnimatedDiv from "./scroll-animated-div";
 
 export const Features = () => {
   return (
-    <Container id="features">
+    <Container id="features" triggerAnim={false}>
       <div>
-        <div className="features-main-container py-8">
+        <ScrollAnimatedDiv className="features-main-container py-8" duration={1}>
           <div className="feature-heading mb-8">
             <span className="text-3xl font-bold text-grey">
               ¿Cómo funciona la App?
@@ -62,7 +63,7 @@ export const Features = () => {
             <div className="features-card-main-container max-lg:w-full">
               <div className="features-card-container -mt-4 flex justify-between items-center gap-12">
                 <div className="wrapper flex flex-col justify-between items-start gap-12">
-                  <div className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
+                  <ScrollAnimatedDiv as="div" duration={2} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
                     <div className="card-logo">
                       <img
                         src="./explora.svg"
@@ -82,8 +83,8 @@ export const Features = () => {
                         </span>
                       </div>
                     </div>
-                  </div>
-                  <div className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
+                  </ScrollAnimatedDiv>
+                  <ScrollAnimatedDiv as="div" duration={3} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
                     <div className="card-logo">
                       <img
                         src="./entrega-y -recogida.svg"
@@ -104,10 +105,10 @@ export const Features = () => {
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </ScrollAnimatedDiv>
                 </div>
                 <div className="wrapper flex flex-col justify-between items-start gap-12">
-                  <div className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
+                  <ScrollAnimatedDiv duration={2.5} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
                     <div className="card-logo">
                       <img
                         src="./seguimiento.svg"
@@ -127,8 +128,8 @@ export const Features = () => {
                         </span>
                       </div>
                     </div>
-                  </div>
-                  <div className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
+                  </ScrollAnimatedDiv>
+                  <ScrollAnimatedDiv duration={3.5} className="card-container flex items-center justify-start lg:px-4 py-6 rounded-xl cards-shadow gap-3 w-72">
                     <div className="card-logo">
                       <img
                         src="./pago-online.svg"
@@ -148,12 +149,12 @@ export const Features = () => {
                         </span>
                       </div>
                     </div>
-                  </div>
+                  </ScrollAnimatedDiv>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </ScrollAnimatedDiv>
       </div>
     </Container>
   );
