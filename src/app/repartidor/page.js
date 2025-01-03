@@ -10,18 +10,18 @@ export default function Page() {
     <>
       <Container triggerAnim={false}>
         <div className="flex flex-row mt-32 justify-center items-center max-lg:flex-wrap">
-          <ScrollAnimatedDiv duration={0.75} delay={2} className="flex flex-col max-lg:w-full lg:px-16 py-4">
-            <h4 className="text-3xl text-grey font-black my-6">
+          <div className="flex flex-col max-lg:w-full lg:px-16 py-4">
+            <ScrollAnimatedDiv duration={0.75} delay={1.25} as="h4" className="text-3xl text-grey font-black my-6">
               ¿Te gustaría ser parte de nuestro equipo?
-            </h4>
-            <span className="lg:w-3/4">
+            </ScrollAnimatedDiv>
+            <ScrollAnimatedDiv as="span" duration={0.9} delay={1.4} className="lg:w-3/4">
               Buscamos personas para realizar recogidas y entregas de pedidos en
               los negocios participantes. Te brindamos calidad, eficiencia y
               satisfacción en tu trabajo. ¡Súmate a nuestro equipo y descubre lo
               que tenemos para ti y tu carrera!
-            </span>
-            <ScrollAnimatedDiv duration={1} delay={2.5} className="features-card-container -mt-4 flex items-center lg:gap-12 max-lg:my-8">
-              <div className="wrapper flex flex-col items-start pt-4">
+            </ScrollAnimatedDiv>
+            <div className="features-card-container -mt-4 flex items-center lg:gap-12 max-lg:my-8">
+              <ScrollAnimatedDiv duration={1} delay={1.5} className="wrapper flex flex-col items-start pt-4">
                 <div className="card-container flex items-center justify-start px-2 py-4 rounded-xl gap-4 my-2 w-72">
                   <div className="card-logo">
                     <HandCoins className="w-12 h-12 p-2 rounded-full bg-dgreen text-white" />
@@ -56,7 +56,7 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </ScrollAnimatedDiv>
               <div className="wrapper flex flex-col items-start pt-4">
                 <div className="card-container flex items-center justify-start px-2 py-4 rounded-xl gap-4 my-2 w-72">
                   <div className="card-logo">
@@ -93,8 +93,8 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </ScrollAnimatedDiv>
-          </ScrollAnimatedDiv>
+            </div>
+          </div>
           <div className="flex flex-col max-lg:hidden w-full justify-center">
             <img
               alt="Repartidor de M2Go"
