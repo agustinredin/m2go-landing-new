@@ -5,7 +5,7 @@ export const Features = () => {
   return (
     <Container id="features" triggerAnim={false}>
       <div>
-        <ScrollAnimatedDiv className="features-main-container py-8" duration={1}>
+        <div className="features-main-container py-8">
           <div className="feature-heading mb-8">
             <span className="text-3xl font-bold text-grey">
               ¿Cómo funciona la App?
@@ -154,7 +154,7 @@ export const Features = () => {
               </div>
             </div>
           </div>
-        </ScrollAnimatedDiv>
+        </div>
       </div>
     </Container>
   );

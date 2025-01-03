@@ -4,7 +4,7 @@ import ScrollAnimatedDiv from "./scroll-animated-div"
 
 export const WhyUs = () => {
     return (
-              <Container id="why-us">
+              <Container id="why-us" triggerAnim={false}>
                 <div className="my-32">
                   <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center justify-items-center gap-[80px]">
                     <div className="why-us-hero">
